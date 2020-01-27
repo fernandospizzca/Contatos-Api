@@ -8,6 +8,8 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
+//Classe não esta sendo utilizada no exemplo com conexão Oracle
+
 @Service
 public class ServicoContato {
     @Autowired

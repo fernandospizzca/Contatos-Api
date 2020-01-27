@@ -1,11 +1,14 @@
 package com.fernandospizzca.ContatosApi.Entidades;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
-@Table(name = "CONTATOS")
 @Data
 public class Contato {
 
@@ -14,21 +17,11 @@ public class Contato {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
-    @Column(name = "NOME", nullable = true, length = 40)
+    @Column(name = "NOME")
     private String nome;
 
-    @Column(name = "TELEFONE", nullable = true, length = 12)
+    @Column(name = "TELEFONE")
     private String telefone;
-
-
-   /*public Contato(String nome, String telefone){
-        this.nome = nome;
-        this.telefone = telefone;
-    }
-    */
-    protected Contato(){
-
-    }
 
     public Long getId(){
         return id;
